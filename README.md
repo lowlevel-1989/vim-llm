@@ -31,7 +31,7 @@ NOTA: todos los resultados se muestran por pantalla y se copian al buffer,
 solo con presionar el boton p, podras pegarlo en vim donde gustes.
 ~~~
 
-### Settings .vimrc, se muestran valores por defecto
+### VIMRC, DEFAULT VALUES
 ~~~
 let g:openai_api_base     = 'https://api.openai.com/v1'
 let g:openai_api_key      = 'sk-XXX'   
@@ -42,6 +42,11 @@ let g:llm_html_buffer     = '50000'
 
 # Envia el contenido recortado al llm -> youtube_content[0:llm_youtube_buffer]
 # Envia el contenido recortado al llm ->    html_content[0:llm_html_buffer]
+~~~
+
+### ENVIROMENTS
+~~~
+- OPENAI_API_KEY=sk-XXX
 ~~~
 
 ### POR CREAR

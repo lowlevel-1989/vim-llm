@@ -34,6 +34,9 @@ let s:llm_html_buffer      = str2nr(get(g:, 'llm_html_buffer',     '50000'))
 let s:loading_finished = 1
 let s:loading_index    = 0
 
+let s:exec_sanitizer_vanilla   = findfile('sanitizer_vanilla.py',                  expand('<sfile>:p:h'))
+let s:exec_youtube_transcripts = findfile('youtube-transcript-api/transcripts.py', expand('<sfile>:p:h'))
+
 " Define la logica de entrada para los sub comandos
 let s:SUB_COMMANDS = {
     \ 'ask':      'LLMGemerate',
@@ -171,7 +174,7 @@ function GPTCommandYoutube(prompt, outfile)
   let id          = a:prompt[0]
   let prompt      = join(a:prompt[1:], ' ')
 
-  let transcripts = system('python youtube-transcript-api/transcripts.py --id ' . id)
+  let transcripts = system('python '. s:exec_youtube_transcripts .' --id ' . id)
   let transcripts = substitute(transcripts, '\n\+', '', 'g')
 
   " Guardamos los primeros 40k
@@ -218,7 +221,7 @@ function GPTCommandHTML(prompt, outfile)
   let html_file_tmp = tempname()
   call writefile(split(html_content, '\n'), html_file_tmp)
   let html_content = ''
-  let html_content = system('python sanitizer_vanilla.py --file ' . html_file_tmp)
+  let html_content = system('python '. s:exec_sanitizer_vanilla  .' --file ' . html_file_tmp)
   call delete(html_file_tmp)
 
 
