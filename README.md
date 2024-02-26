@@ -15,6 +15,9 @@
 - document: Para realizar preguntas sobre el propio documento. 
             Si estas en modo visual, se envia solo la selección
             del documento.
+
+NOTA: todos los resultados se muestran por pantalla y se copian al buffer,
+solo con presiona el boton p, podras pegarlo en vim donde gustes.
 ~~~
 
 ### Settings .vimrc, se muestran valores por defecto
