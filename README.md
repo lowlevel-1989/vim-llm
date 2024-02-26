@@ -17,7 +17,7 @@
             del documento.
 
 NOTA: todos los resultados se muestran por pantalla y se copian al buffer,
-solo con presiona el boton p, podras pegarlo en vim donde gustes.
+solo con presionar el boton p, podras pegarlo en vim donde gustes.
 ~~~
 
 ### Settings .vimrc, se muestran valores por defecto
