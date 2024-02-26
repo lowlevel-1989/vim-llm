@@ -1,3 +1,14 @@
+### ESTRUCTURA DE COMANDOS
+~~~
+:{llm} {command} {args} {prompt}
+~~~
+
+### LLM SOPORTADOS
+~~~
+- GPT
+- Gpt
+~~~
+
 ### COMANDOS SOPORTADOS
 ~~~
 :Gpt {prompt}
