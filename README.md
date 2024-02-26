@@ -3,7 +3,6 @@
 :Gpt {prompt}
 :Gpt ask {prompt}
 :Gpt html {url} {prompt}
-:Gpt web  {url} {prompt}
 :Gpt youtube {id} {prompt}
 ~~~
 
@@ -11,8 +10,11 @@
 ~~~
 - ask:      Para realizar una pregunta.
 - html:     Para realizar scraping.
-- web:      Para realizar preguntas de la propia web.
-- youtube:  Para realizar preguntas del propio video. 
+- web:      Para realizar preguntas sobre la propia web.
+- youtube:  Para realizar preguntas sobre el propio video. 
+- document: Para realizar preguntas sobre el propio documento. 
+            Si estas en modo visual, se envia solo la selección
+            del documento.
 ~~~
 
 ### Settings .vimrc, se muestran valores por defecto
@@ -30,7 +32,8 @@ let g:llm_html_buffer     = '50000'
 
 ### POR CREAR
 ~~~
-:Gpt document {prompt}
+:Gpt document  {prompt}
+:Gpt web {url} {prompt}
 ~~~
 
 ### DEPENDENCIAS DEL SISTEMA
